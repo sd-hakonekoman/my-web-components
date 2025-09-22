@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Components</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <h1>Study Components</h1>
+            <p>コンポーネントベースの学習プロジェクト</p>
+        </header>
+
+        <main class="main">
+            <section class="hero">
+                <h2>Welcome to Study Components</h2>
+                <p>このプロジェクトでは、再利用可能なUIコンポーネントの設計と実装を学習します。</p>
+                <button class="cta-button" onclick="showMessage()">学習を開始</button>
+            </section>
+
+            <section class="components-showcase">
+                <h3>コンポーネント一覧</h3>
+                <div class="component-grid">
+                    <div class="component-card">
+                        <h4>Button</h4>
+                        <p>基本的なボタンコンポーネント</p>
+                        <button class="sample-button primary">Primary</button>
+                        <button class="sample-button secondary">Secondary</button>
+                    </div>
+                    
+                    <div class="component-card">
+                        <h4>Card</h4>
+                        <p>情報を整理して表示するカードコンポーネント</p>
+                        <div class="sample-card">
+                            <h5>サンプルカード</h5>
+                            <p>カードの内容がここに表示されます。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="component-card">
+                        <h4>Input</h4>
+                        <p>ユーザー入力を受け取るフォームコンポーネント</p>
+                        <input type="text" class="sample-input" placeholder="テキストを入力してください">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Study Components Project</p>
+        </footer>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
