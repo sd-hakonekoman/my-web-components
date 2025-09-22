@@ -1,6 +1,7 @@
 {
   "name": "study-components",
   "version": "1.0.0",
+  "type": "module",
   "description": "コンポーネントベースの学習プロジェクトです。再利用可能なUIコンポーネントの研究と実装を通じて、モダンなWeb開発の技術とパターンを学習することを目的としています。",
   "main": "index.js",
   "scripts": {
@@ -14,5 +15,9 @@
   "license": "ISC",
   "devDependencies": {
     "vite": "^7.1.6"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "tailwindcss": "^4.1.13"
   }
 }
