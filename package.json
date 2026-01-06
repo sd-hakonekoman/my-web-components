@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vite": "^7.1.6",
-    "@tailwindcss/vite": "^4.1.13",
-    "tailwindcss": "^4.1.13"
+    "vite": "^7.3.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18"
   }
 }
