@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+summary {
+  list-style: none;
+}
+
+summary {
+  cursor: pointer;
+}
+
+/* iOS用 summaryの矢印削除 */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Accordion styles */
+.c-accordion {
+  --duration: 300ms;
+  border: 1px solid black;
+
+  &::details-content {
+    content-visibility: unset;
+    display: block grid;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition-duration: var(--duration);
+      transition-property: grid-template-rows;
+    }
+  }
+
+  &:not([open])::details-content {
+    grid-template-rows: 0fr;
+  }
+
+  &[open]::details-content {
+    grid-template-rows: 1fr;
+  }
+}
+
+.c-accordion__body {
+  overflow: hidden;
+}
+
+.c-accordion__contentWrapper {
+  padding: 1em;
+  background-color: #ddd;
+}
