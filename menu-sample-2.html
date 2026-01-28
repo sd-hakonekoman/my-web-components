@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>PC/SPメニュー共通 Responsive Accessible Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-100 text-gray-900" data-menu-open="false">
+<header class="bg-white shadow-md relative z-50">
+  <div class="mx-auto flex max-w-7xl items-center justify-between p-4">
+    <div class="text-xl font-bold">Logo</div>
+
+    <button 
+      id="menu-button"
+      type="button" 
+      class="lg:hidden p-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+      aria-controls="main-navigation" 
+      aria-expanded="false" 
+      aria-label="メニューを開く"
+    >
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <nav 
+      id="main-navigation" 
+      class="
+        /* SP用スタイル: 初期は画面外に隠す / モーダル風 */
+        fixed inset-y-0 right-0 z-40 w-64 transform bg-white p-6 shadow-xl transition-transform duration-300 ease-in-out translate-x-full
+        /* PC用スタイル: 常に表示 / 横並び */
+        lg:static lg:w-auto lg:translate-x-0 lg:bg-transparent lg:p-0 lg:shadow-none
+      "
+      aria-hidden="true"
+    >
+      <ul class="flex flex-col space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
+        <li><a href="#" class="text-gray-700 hover:text-blue-600 font-medium">ホーム</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-blue-600 font-medium">サービス</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-blue-600 font-medium">会社概要</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-blue-600 font-medium border-2 border-blue-600 px-4 py-2 rounded-lg lg:ml-4">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden lg:hidden" aria-hidden="true"></div>
+</header>
+
+<main>
+  <a href="https://www.google.com/">https://www.google.com/</a>
+  <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consectetur odio delectus ea quidem ducimus, tempora sed nobis unde minus optio totam incidunt! Quas magni nihil nesciunt facere dignissimos, placeat fuga odit voluptatem saepe reprehenderit illum animi quasi incidunt ut quae aliquid, adipisci, blanditiis voluptatibus necessitatibus laudantium repellendus dolorum nisi soluta modi! Nostrum incidunt in obcaecati dolor placeat vero maxime voluptatibus blanditiis porro provident voluptates ex rem itaque consequatur recusandae fugiat perspiciatis cumque, minima temporibus accusantium. Eius ab voluptatibus aliquid odio perspiciatis quam quo impedit mollitia, itaque est eligendi, nam facere debitis odit reprehenderit illo nihil culpa ex ratione rerum, incidunt accusantium! Repellat, quis rerum voluptate doloremque quia modi enim sapiente magni error ipsa nulla similique minima laudantium, rem exercitationem impedit praesentium obcaecati tenetur numquam voluptates iure ullam alias! Quidem expedita nulla maiores, ut et corporis! Expedita excepturi nihil esse quas repudiandae obcaecati consectetur ipsum id hic quibusdam? Harum omnis sequi velit, repellat sint iure quisquam voluptates? Obcaecati eum nam blanditiis non, ad quam iste earum, dolor quas incidunt quos eveniet aliquam. Laboriosam eligendi ab, sint, placeat, tenetur dolores qui quam voluptates voluptate voluptas at deserunt voluptatem! Ipsam est hic cupiditate. Rem, aut quod aliquam sequi dignissimos atque quaerat veritatis perferendis perspiciatis! Quod suscipit, ab aliquid eveniet possimus consequuntur hic non delectus tempora repellendus! Autem obcaecati dolore consectetur ipsam, minima dolores suscipit, error quod aut totam voluptatem? Doloremque atque consequatur illo libero modi nulla, harum repellendus quasi fugit voluptatum delectus magnam pariatur mollitia corporis qui esse corrupti deleniti quia veniam ea debitis. Accusamus dicta illo eligendi sunt similique temporibus fugit, magnam dolores ad autem voluptatibus provident est pariatur officiis veniam mollitia doloremque adipisci quia nisi vero quae facilis, explicabo debitis! Nam suscipit corporis exercitationem! Sequi praesentium consectetur commodi, eligendi quo fugit, officia nesciunt delectus facilis iusto, maxime quam libero enim rerum saepe quos ad? Dolores perspiciatis voluptas mollitia, deleniti, provident ipsam reiciendis tempora dolorem pariatur iusto fugit? Molestiae ipsum ullam veritatis delectus neque nobis ipsa reprehenderit dolor at, vero ut odit, maiores fugit harum officiis, dignissimos asperiores magnam non expedita natus consectetur sequi. Expedita, consectetur natus consequatur in nesciunt corrupti vel quod. Quasi, nihil nobis iure nesciunt ipsa optio officiis similique at ab facere dolores sint, voluptatem facilis nostrum alias repellendus? Aut maxime aperiam a. Quae esse incidunt officiis reiciendis distinctio culpa magni, tempore sit facere quo adipisci vero corporis ducimus nihil eum nostrum recusandae. Tenetur natus ex autem nihil placeat, alias, repellat ad quidem maxime consequatur debitis. Enim atque assumenda necessitatibus labore porro magnam tempora eius ut, quasi molestiae quaerat velit maiores pariatur repellendus. Similique ratione dolore nisi, cumque veritatis molestiae, odit sit qui minima fuga sint facere mollitia praesentium fugit suscipit odio dicta quis explicabo, id numquam voluptatum. Possimus magnam quae nulla quam illo? Neque adipisci magnam nulla quod vitae at placeat, exercitationem ut vero, atque autem commodi architecto fugiat doloribus reprehenderit nemo. Animi doloremque quaerat tempora nostrum quidem quas sapiente eum expedita neque tenetur. Fuga, vero fugit nulla veritatis omnis rerum necessitatibus nobis aperiam sit repudiandae quasi nam tempora alias, repellendus vel voluptate porro eaque temporibus ex repellat ad ut libero, commodi a. Possimus quaerat aut sequi animi et quod voluptas, quo architecto quia voluptate vero dolorum veniam neque officia debitis impedit nam beatae quis ut. Ducimus facere numquam impedit aspernatur et qui consequuntur officiis similique. Reiciendis animi veniam cupiditate dolorum minus, iusto, sunt eum incidunt quisquam nostrum ipsum cum quis voluptatibus ex alias possimus labore voluptatum, quia hic consequuntur! Tenetur quas nisi cupiditate obcaecati consequatur, nam aperiam quibusdam! Vitae delectus in dolore, suscipit repellat voluptas assumenda porro ut tempore non quos! Doloribus, quis quibusdam consectetur architecto enim unde eum obcaecati? Dolorem aliquam omnis id provident blanditiis soluta minus numquam officiis harum, debitis tempore nostrum itaque saepe enim explicabo dicta voluptas ut? Officiis qui maiores necessitatibus odit facilis, est at sapiente totam amet! Nobis inventore aliquam maiores quasi in illo dolore delectus, est rerum dolorum sint quidem, explicabo, vitae dolores dolor! Deleniti repellendus labore dolores illum quisquam obcaecati dolor perferendis, sunt magnam nobis beatae praesentium minima temporibus iusto quaerat, adipisci aliquid? Unde in maxime vero aperiam rem alias. Beatae delectus sit dolore doloribus corrupti quis officiis voluptate, ex numquam ipsa quia quidem? Sint necessitatibus aliquid eos odit laboriosam tempora adipisci reiciendis perspiciatis perferendis rem doloremque explicabo totam delectus deleniti, nostrum itaque ut, esse nemo maxime pariatur incidunt doloribus velit autem reprehenderit. Magni beatae libero labore mollitia molestias dignissimos saepe sed, non amet! Et, esse necessitatibus. Quis molestiae enim neque earum eius fuga iusto reiciendis a, omnis accusamus soluta quia veniam impedit, cumque deserunt fugiat aut vero sint incidunt. Quis, perferendis molestiae magnam quibusdam alias adipisci. Repellat voluptas rerum architecto illo minus inventore distinctio aliquam autem esse impedit laboriosam velit, ea, est nulla sint sunt sed similique qui minima obcaecati consequuntur accusantium? Obcaecati quidem voluptatibus accusamus adipisci nemo, inventore odit aliquam voluptate deserunt fugiat ut iusto voluptates sit pariatur atque vel illo maxime. Omnis, numquam iure, molestias quos voluptates corporis ullam quam aspernatur deserunt facilis minus. Sint quibusdam id impedit corporis cum qui atque ipsam? Consequatur, quidem eligendi, ipsum at ex ad tempora in deleniti doloribus, eos nihil nulla corporis fugit maiores. Esse explicabo, atque veritatis dolor, aliquam, sit asperiores vero nam quos accusantium accusamus sequi autem! Officiis provident praesentium labore pariatur doloribus molestias, quibusdam modi corporis ipsum facere quo omnis asperiores minus laborum voluptas distinctio ad consectetur cupiditate deleniti unde iusto nihil odio maxime dignissimos! Distinctio, quis vero vitae cum nihil incidunt tenetur error sequi aperiam pariatur unde est, nemo quidem voluptatem aut ab in voluptas debitis? Perferendis minima vero provident deserunt excepturi sapiente voluptas debitis adipisci animi illum ex, odit blanditiis dignissimos nostrum dolore, error officiis, reprehenderit rerum non consequuntur esse corporis! Adipisci ratione totam nobis explicabo aspernatur cupiditate nulla praesentium eos neque repellat provident aut eveniet at, hic delectus tempore saepe, rerum dolorum quas! Quibusdam, optio? Quaerat autem consectetur odio unde saepe non tempore blanditiis fugit ut cumque sapiente quae ullam nobis, earum vitae officia placeat perferendis suscipit odit illum culpa! Soluta ratione perspiciatis quam.</p>
+</main>
+<footer><a href="https://www.google.com/">https://www.google.com/</a></footer>
+
+<script>
+  const btn = document.getElementById('menu-button');
+  const nav = document.getElementById('main-navigation');
+  const overlay = document.getElementById('menu-overlay');
+
+  function toggleMenu() {
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    
+    // 状態を反転
+    btn.setAttribute('aria-expanded', !isExpanded);
+    nav.setAttribute('aria-hidden', isExpanded);
+    
+    // 見た目の切り替え（Tailwindのクラスを操作）
+    nav.classList.toggle('translate-x-full');
+    overlay.classList.toggle('hidden');
+    
+    // スクロール制御（メニューが開いている間は背面を動かさない）
+    document.body.style.overflow = isExpanded ? '' : 'hidden';
+  }
+
+  btn.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+
+  // Escキーで閉じる処理（アクセシビリティ対応）
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+      toggleMenu();
+      btn.focus(); // 閉じた後にフォーカスをボタンに戻す
+    }
+  });
+</script>
+</body>
+</html>
