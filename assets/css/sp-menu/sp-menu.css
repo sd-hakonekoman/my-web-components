@@ -20,24 +20,6 @@
   /* 表示アニメーション */
   &[data-state="open"] {
     --_opacity: 1;
-
-    .c-sp-menu-button__lines > span {
-      &:nth-child(1) {
-        top: 50%;
-        rotate: var(--_line-rotate);
-        transform: translateY(-50%);
-      }
-
-      &:nth-child(2) {
-        opacity: 0;
-      }
-
-      &:nth-child(3) {
-        bottom: 50%;
-        rotate: calc(var(--_line-rotate) * -1);
-        transform: translateY(50%);
-      }
-    }
   }
 }
 

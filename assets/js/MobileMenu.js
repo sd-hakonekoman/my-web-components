@@ -1,6 +1,4 @@
 export function MobileMenu() {
-  console.log("MobileMenu initialized");
-
   const menuButton = document.getElementById("menu-button");
   const dialog = document.getElementById("mobile-menu");
   const closeButton = document.getElementById("menu-close");

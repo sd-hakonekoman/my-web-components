@@ -9,7 +9,6 @@
 .c-sp-menu-button__lines {
   --_color: #fff;
   --_line-height: 1px;
-  --_line-y: 50%;
   --_line-rotate: -45deg;
   position: relative;
   display: block;
@@ -42,8 +41,8 @@
 }
 
 /* メニューオープン */
-.c-sp-menu-button[data-menu="open"] {
-  > .c-sp-menu-button__lines > span {
+.c-sp-menu[data-state="open"] {
+  .c-sp-menu-button__lines > span {
 
     &:nth-child(1) {
       top: 50%;
