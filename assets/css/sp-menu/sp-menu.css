@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/* dialogの簡易モーダル風 */
+.c-sp-menu {
+  width: 100%;
+  background-color: var(--header-bgc);
+
+  /* アニメーション */
+  --_opacity: 0;
+  --_timing-function: ease;
+  opacity: var(--_opacity);
+  transition: opacity var(--sp-menu-duration) var(--_timing-function);
+
+  /* 背景オーバーレイ */
+  &::backdrop {
+    opacity: var(--_opacity);
+    transition: opacity var(--sp-menu-duration) var(--_timing-function);
+  }
+
+  /* 表示アニメーション */
+  &[data-state="open"] {
+    --_opacity: 1;
+  }
+}
+
+.c-sp-menu__head {
+  position: sticky;
+  top: 0;
+}
+
+.c-sp-menu__body {
+  width: 100%;
+  height: 80vh;
+}
+
+/* 動きを減らす設定の人にはアニメ無効化 */
+@media (prefers-reduced-motion: reduce) {
+  .c-sp-menu,
+  .c-sp-menu::backdrop {
+    transition: none;
+  }
+}

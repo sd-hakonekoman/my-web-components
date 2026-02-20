@@ -1,2 +1,12 @@
+/* common */
 @import "tailwindcss";
-@import "./assets/css/accordion.css";
+@import "./assets/css/base.css";
+@import "./assets/css/utilities.css";
+
+/* accordion */
+@import "./assets/css/accordion/accordion.css";
+
+/* sp-menu */
+@import "./assets/css/sp-menu/header.css";
+@import "./assets/css/sp-menu/sp-menu.css";
+@import "./assets/css/sp-menu/sp-menu-button.css";

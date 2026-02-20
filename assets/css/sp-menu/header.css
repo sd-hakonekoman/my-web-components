@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.c-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--header-bgc);
+  border-bottom: 1px solid gray;
+}
+
+.c-header__pc-inner {
+  @media not all and (width >= 768px) {
+    display: none;
+  }
+}
+
+.c-header__sp-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0;
+}
+
+.c-header__sp-inner--pc-hidden {
+  @media (width >= 768px) {
+    display: none;
+  }
+}
+
+.c-header__logo {
+  font-size: 1rem;
+}
