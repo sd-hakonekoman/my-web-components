@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* グローバル変数 */
+:root {
+  --header-bgc: #fff;
+  --sp-menu-duration: 150ms;
+}
+
+/* ダイアログ */
+dialog {
+  max-width: none;
+  border: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  /* 背景オーバーレイ */
+  &::backdrop {
+    background-color: rgba(0,0,0,.5);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}

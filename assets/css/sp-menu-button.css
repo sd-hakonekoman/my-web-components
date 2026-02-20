@@ -1,0 +1,64 @@
+.c-sp-menu-button {
+  width: 50px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  background-color: #323232;
+  padding-inline: 15px;
+}
+
+.c-sp-menu-button__lines {
+  --_color: #fff;
+  --_line-height: 1px;
+  --_line-y: 50%;
+  --_line-rotate: -45deg;
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 20/16;
+
+  /* ライン */
+  > span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: var(--_line-height);
+    background-color: var(--_color);
+
+    &:nth-child(1) {
+      top: 0;
+      rotate: 0deg;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      rotate: 0deg;
+    }
+  }
+}
+
+/* メニューオープン */
+.c-sp-menu-button[data-menu="open"] {
+  > .c-sp-menu-button__lines > span {
+
+    &:nth-child(1) {
+      top: 50%;
+      rotate: var(--_line-rotate);
+      transform: translateY(-50%);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      bottom: 50%;
+      rotate: calc(var(--_line-rotate) * -1);
+      transform: translateY(50%);
+    }
+  }
+}

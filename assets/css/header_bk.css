@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.c-header__menuIcon {
+  width: 24px;
+  height: 24px;
+}
+
+/* 背景オーバーレイ */
+.c-mainMenuOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background-color: rgba(0, 0, 0, 0.4);
+}
