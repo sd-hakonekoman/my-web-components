@@ -87,6 +87,10 @@ export function MobileMenu() {
   dialog.addEventListener("click", (e) => {
     // dialog要素自身をクリック＝背面クリックに近い
     if (e.target === dialog) closeMenu();
+
+    // リンククリック時にもメニューを閉じる
+    const link = e.target.closest("a");
+    if (link) closeMenu();
   });
 
   // SPで開いている状態からPC幅に切り替わったら閉じる
