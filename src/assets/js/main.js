@@ -1,5 +1,5 @@
 // sp-menu
-import { MobileMenu } from './assets/js/MobileMenu.js';
+import { MobileMenu } from '../../components/sp-menu/MobileMenu.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   MobileMenu();
